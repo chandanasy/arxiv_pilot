@@ -1,0 +1,32 @@
+PyPDF2==3.0.1
+python-dotenv==1.0.0
+# openai==0.27.6
+# faiss-cpu==1.7.4
+altair==4
+# tiktoken==0.4.0
+# uncomment to use huggingface llms
+# huggingface-hub==0.14.1
+
+# uncomment to use instructor embeddings
+# InstructorEmbedding==1.0.1
+# sentence-transformers==2.2.2
+extra-streamlit-components==0.1.70
+streamlit==1.32.0
+streamlit-authenticator==0.3.1
+timm
+sentence-transformers==2.5.1
+transformers==4.38.2
+torch==2.2.1
+torchvision==0.17.1
+safetensors==0.4.2
+pypdf==4.1.0
+langchain==0.1.11
+langchain-cli==0.0.21
+langchain-community==0.0.25
+langchain-core==0.1.29
+langchain-experimental==0.0.36
+langchain-openai==0.0.8
+langchain-text-splitters==0.0.1
+langchainhub==0.1.15
+langchain-anthropic==0.1.2
+chromadb==0.4.3
