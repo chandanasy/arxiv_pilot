@@ -33,44 +33,72 @@ css = """
 .st-emotion-cache-fta39a{
   gap: 0px;
 }
-h2 {
-padding: 0.1rem;
+
+.item-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+.item-link {
+    margin-bottom: 5px;
+}
+
+.item-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.item-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-text {
+    flex: 1;
+}
+
+.item-text p {
+    margin: 0;
+}
+
+.line1 {
+    font-weight: bold;
+}
+
+.line2 {
+    color: #666;
+}
+
+.cite-button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+</style>
 """
 
-bot_template = """
-<div class="chat-message bot">
-    <div class="message">{{MSG}}</div>
-</div>
-"""
-
-trading_view_template = """
-<div class="tradingview-widget-container">
-    <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js" async>
-    {
-    "autosize": true,
-    "symbol": "NYSE:{{ticker}}",
-    "interval": "D",
-    "timezone": "Etc/UTC",
-    "theme": "light",
-    "width": "100%",
-    "height": "100%",
-    "style": "1",
-    "locale": "en",
-    "enable_publishing": false,
-    "allow_symbol_change": false,
-    "calendar": false,
-    "support_host": "https://www.tradingview.com",
-    "container_id": "tradingview_b9e4a",
-    "studies_overrides": {
-      "rsi.rsi.plot.color": "#2196f3",
-      "rsi.level.0": 20,
-      "rsi.level.1": 80
-    },
-    "studies": [
-        "RSI@tv-basicstudies"
-    ]
-    }
-    </script>
+item_template = """
+<div class="item-box">
+    <div class="item-link">
+        <a href="{{URL}}" target="_blank">{{URL}}</a>
+    </div>
+    <div class="item-content">
+        <div class="item-text">
+            <p class="line1">{{LINE1}}</p>
+        </div>
+        <div class="item-button">
+            <button class="cite-button">
+                <i class="fas fa-plus-circle"></i>
+            </button>
+        </div>
+    </div>
 </div>
 """
