@@ -40,17 +40,17 @@ def get_anthropic_answer(content):
 def handle_userinput():
     user_text = st.session_state["textarea"]
     if st.session_state["textarea"]:
-        if abs(len(st.session_state) - len(user_text)) > 10:
+        if abs(len(st.session_state.usertext) - len(user_text)) > 10:
             retriever = ArxivRetriever(load_max_docs=3)
             docs = retriever.get_relevant_documents(query=user_text)
             # print(len(docs))
             # print([[doc.metadata['Entry ID'], doc.metadata['Title']] for doc in docs])
-            print(len(docs))
             st.session_state["links"] = []
+            print("arxiv retriever")
             st.session_state["links"].extend(
                 [[doc.metadata["Entry ID"], doc.metadata["Title"]] for doc in docs]
             )
-
+            print(st.session_state["links"])
             uri = "neo4j+s://c6666d76.databases.neo4j.io:7687"  # Replace with your Neo4j database URI
             username = "neo4j"  # Replace with your Neo4j username
             password = os.environ["NEO_PASS"]  # Replace with your Neo4j password
@@ -67,9 +67,8 @@ def handle_userinput():
             )
             query = "papers on " + user_text
             res = chain(query)
-            print(len(res["result"]))
+
             if hasattr(res, "result") and hasattr(res["result"]["p"]):
-                print(len(res["result"]))
 
                 st.session_state["links"].extend(
                     [
@@ -81,7 +80,6 @@ def handle_userinput():
                     ]
                 )
             elif hasattr(res, "result") and hasattr(res["result"]["p1"]):
-                print(len(res["result"]))
 
                 st.session_state["links"].extend(
                     [
@@ -103,9 +101,10 @@ def handle_userinput():
                             for r in res["result"]
                         ]
                     )
+            print("graphql retriever")
+            print(st.session_state["links"])
 
-            st.write("calling!!!")
-            print("calling!!!")
+        st.session_state.usertext = user_text
 
 
 def get_response(response: str) -> str:
