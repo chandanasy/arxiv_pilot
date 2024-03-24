@@ -1,5 +1,7 @@
 # PaperLink
 
+The inspiration for PaperLink came from recognizing the desire for a unified platform that caters to the needs of students, researchers, and organizations in the field of academic research. We saw the pain points faced by individuals and groups in navigating the web for scholarly works & we wanted to create a solution that simplifies this process.
+
 PaperLink is a Streamlit application that helps users discover relevant research papers from the ArXiv website based on their text input. The application fetches data from the ArXiv API, processes the information, and presents the results in an intuitive and user-friendly interface.
 
 ## Features
