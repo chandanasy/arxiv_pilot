@@ -1,6 +1,8 @@
-# ArXiv Paper Finder
+# PaperLink
 
-ArXiv Paper Finder is a Streamlit application that helps users discover relevant research papers from the ArXiv website based on their text input. The application fetches data from the ArXiv API, processes the information, and presents the results in an intuitive and user-friendly interface.
+The inspiration for PaperLink came from recognizing the desire for a unified platform that caters to the needs of students, researchers, and organizations in the field of academic research. We saw the pain points faced by individuals and groups in navigating the web for scholarly works & we wanted to create a solution that simplifies this process.
+
+PaperLink is a Streamlit application that helps users discover relevant research papers from the ArXiv website based on their text input. The application fetches data from the ArXiv API, processes the information, and presents the results in an intuitive and user-friendly interface.
 
 ## Features
 
@@ -12,7 +14,7 @@ ArXiv Paper Finder is a Streamlit application that helps users discover relevant
 
 ## Installation
 
-To run the ArXiv Paper Finder application locally, follow these steps:
+To run PaperLink locally, follow these steps:
 
 1. Clone the repository:
 
@@ -59,10 +61,11 @@ The ArXiv Paper Finder application can be configured by adding .env file
 
 ## Contributing
 
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgements
 
-The ArXiv Paper Finder application relies on the ArXiv API to fetch paper metadata. We would like to acknowledge the ArXiv team for providing access to their valuable dataset.
+The PaperLink application relies on the ArXiv API to fetch paper metadata. We would like to acknowledge the ArXiv team for providing access to their valuable dataset.
