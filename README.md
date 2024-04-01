@@ -4,6 +4,8 @@ The inspiration for PaperLink came from recognizing the desire for a unified pla
 
 PaperLink is a Streamlit application that helps users discover relevant research papers from the ArXiv website based on their text input. The application fetches data from the ArXiv API, processes the information, and presents the results in an intuitive and user-friendly interface.
 
+Link to Devpost Submission - https://devpost.com/software/paperlink-ft87lw
+
 ## Features
 
 - **Text-based search**: Enter a text query or description of your research topic to find relevant papers.
@@ -58,6 +60,7 @@ The ArXiv Paper Finder application can be configured by adding .env file
 
 - `OPENAI_API_KEY`: Openai api key
 - `NEO_PASS`: Neo4j password
+
 
 ## Contributing
 
