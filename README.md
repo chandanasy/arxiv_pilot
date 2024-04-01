@@ -2,7 +2,7 @@
 
 The inspiration for PaperLink came from recognizing the desire for a unified platform that caters to the needs of students, researchers, and organizations in the field of academic research. We saw the pain points faced by individuals and groups in navigating the web for scholarly works & we wanted to create a solution that simplifies this process.
 
-PaperLink is a Streamlit application that helps users discover relevant research papers from the ArXiv website based on their text input. The application fetches data from the ArXiv API, processes the information, and presents the results in an intuitive and user-friendly interface.
+PaperLink revolutionizes academic research with a user-friendly platform combining GCP's scalability, Neo4j's knowledge graphs for managing citations, and Python for robust backend operations. It simplifies the research process with efficient AI-powered search capabilities using Anthropic's Claude and RAG retrieval, providing a seamless experience for researchers tired of wading through endless links and citations.
 
 Link to Devpost Submission - https://devpost.com/software/paperlink-ft87lw
 
